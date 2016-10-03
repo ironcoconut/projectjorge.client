@@ -1,0 +1,12 @@
+#!/bin/bash
+
+path=${PWD}
+
+rm -r "$path/vendor/"
+mkdir "$path/vendor/"
+wget -P $path/vendor/ https://npmcdn.com/react@15.3.1/dist/react.js
+wget -P $path/vendor/ https://npmcdn.com/react-dom@15.3.1/dist/react-dom.js
+wget -P $path/vendor/ https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css
+wget -P $path/vendor/ https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js
+wget -P $path/vendor/ https://cdn.rawgit.com/visionmedia/page.js/master/page.js
+wget -P $path/vendor/ https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js

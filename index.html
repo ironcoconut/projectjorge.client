@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Jorge</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  	<meta name="mobile-web-app-capable" content="yes">
+    <meta property="og:title" content="End Homelessness in Houston" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ironcoconut.github.io/projectjorge/#/mailinglist" />
+    <meta property="og:image" content="https://ironcoconut.github.io/projectjorge/assets/pope-francis.jpg" />
+    <meta property="og:site_name" content="Project Jorge" />
+    <meta property="og:description" content="Pope Francis is right. Let us use technology to help each other. Let us use technology to end homelessness in Houston." />
+    <link href='https://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="vendor/leaflet.css" />
+  </head>
+  <body>
+    <div id="bodycontainer"></div>
+
+    <!-- vendor -->
+    <script src="vendor/leaflet.js"></script>
+    <script src="vendor/react.js"></script>
+    <script src="vendor/react-dom.js"></script>
+    <script src="vendor/jquery.js"></script>
+    <script src="vendor/page.js"></script>
+
+    <!-- registries organize components into namespaces-->
+    <script src="registries/pj.js"></script>
+    <script src="registries/order.js"></script>
+    <script src="registries/store.js"></script>
+    <script src="registries/view.js"></script>
+    <script src="registries/element.js"></script>
+    <script src="registries/router.js"></script>
+
+    <!-- orders tell the page what to load and display -->
+    <script src="orders/home.js"></script>
+    <script src="orders/login.js"></script>
+    <script src="orders/signup.js"></script>
+
+    <!-- views are react pages -->
+    <script src="views/index.js"></script>
+    <script src="views/loading.js"></script>
+    <script src="views/home.js"></script>
+    <script src="views/login.js"></script>
+    <script src="views/signup.js"></script>
+
+    <!-- react elements make up the pages-->
+
+    <!-- start app -->
+    <script>
+      PJ.start(); 
+    </script>
+  </body>
+</html>

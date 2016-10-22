@@ -37,6 +37,7 @@ var PJ = (function() {
   return new SimpleRegistry(function(pj) {
     pj.register('new_registry', new_registry);
     pj.register('render', render_app);
+    pj.register('base_url', 'http://localhost:4201/api');
     pj.register('start', start_app);
   });
 }());

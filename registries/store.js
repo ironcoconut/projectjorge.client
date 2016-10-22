@@ -5,7 +5,7 @@ PJ.new_registry(
   function(store) {
     var events = null;
     var current_user = null;
-    var base_url = 'http://localhost:4201/api';
+    var base_url = PJ.base_url;
 
     // utility
 

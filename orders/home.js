@@ -10,5 +10,9 @@ PJ.Order.register('home', function(ctx) {
     PJ.render('home', data);
   }
 
-  Store.events().then(update_home);
+  function render() {
+    PJ.render('home');
+  }
+
+  Store.events().then(render);
 })

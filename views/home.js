@@ -1,10 +1,12 @@
-PJ.View.register(
+PJ.View.register_view(
   'home', 
-  React.createClass({
-    render: function() {
-      var state = this.state;
+  function(app) {
+    return {
+      render: function() {
+        var state = this.state;
 
-      return React.createElement('p', null, 'home');
-    }
-  })
+        return app.p({}, 'home');
+      }
+    };
+  }
 );

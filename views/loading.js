@@ -1,10 +1,10 @@
-PJ.View.register(
+PJ.View.register_view(
   'loading', 
-  React.createClass({
-    render: function() {
-      var state = this.state;
-
-      return React.createElement('p', null, 'loading');
-    }
-  })
+  function(app) {
+    return {
+      render: function() {
+        return app.p({}, 'loading');
+      }
+    };
+  }
 );

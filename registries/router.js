@@ -21,6 +21,9 @@ PJ.new_registry(
     build_route({path: '/events/new', name: 'event_new', auth: true});
     build_route({path: '/invite', name: 'event_new', auth: true});
 
+    // default redirect to home
+    page('*', '/');
+
     // implementation
 
     function build_route(opts) {

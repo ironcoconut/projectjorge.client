@@ -1,16 +1,16 @@
 var PJ = (function() {
 
   function new_registry(name, callback) {
-    if (!name) throw "Name is null";
-    if (this[name]) throw "Element already exists: " + name;
+    if (!name) console.error("Name is null");
+    if (this[name]) console.error("Element already exists: " + name);
 
     this[name] = new SimpleRegistry(callback);
   }
 
   function register(name, item) {
-    if (!name) throw "Name is null";
-    if (!item) throw "Item is null for: " + name;
-    if (this[name]) throw "Element already exists: " + name;
+    if (!name) console.error("Name is null");
+    if (!item) console.error("Item is null for: " + name);
+    if (this[name]) console.error("Element already exists: " + name);
 
     this[name] = item;
   }
@@ -29,7 +29,7 @@ var PJ = (function() {
   }
 
   function start_app() {
-    console.log('ProjectJorge::Buffet Starting');
+    console.log('ProjectJorge::Gates Starting');
     render_app('loading');
     page.start();
   }

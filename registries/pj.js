@@ -34,10 +34,15 @@ var PJ = (function() {
     page.start();
   }
 
+  function build_url(base, paths) {
+    return [base].concat(paths).join('/');
+  }
+
   return new SimpleRegistry(function(pj) {
     pj.register('new_registry', new_registry);
     pj.register('render', render_app);
-    pj.register('base_url', 'http://localhost:4201/api');
+    pj.register('base_url', build_url.bind(null, 'http://localhost:4201/api'));
+    pj.register('map_url', build_url.bind(null, 'https://www.google.com/maps/place/'));
     pj.register('start', start_app);
   });
 }());
